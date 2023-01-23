@@ -1,0 +1,2 @@
+There are many counterexamples which invalidate obvious approaches.
+We give several examples that stop some first ideas to deal with the problem.
