@@ -22,7 +22,7 @@ func main() {
 	RandLineWriter(w, "data/mainresult.txt")
 	InputLineWriter(w, "State the main results")
 	RandLineWriter(w, "data/novelty.txt")
-	InputLineWriter(w, `State new, interesting, 
+	InputLineWriter(w, `State new, interesting, unique 
 or surprising ideas. For example
 they could be new diffculties resolved here
 that are not present in previous work`)
