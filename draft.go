@@ -30,13 +30,13 @@ that are not present in previous work`)
 	w.Flush()
 }
 
-
 func ck(err error) {
 	if err != nil {
 		log.Fatal(err)
 	}
 }
 
+// RandLineWriter furnishes a random line given a file.
 func RandLineWriter(w *bufio.Writer, filename string) {
 	f, err := os.Open(filename)
 	var b string
@@ -53,7 +53,7 @@ func RandLineWriter(w *bufio.Writer, filename string) {
 		if r.Intn(linenumber) == 0 {
 			b = line
 		}
-		linenumber += 1
+		linenumber++
 	}
 
 	sb.WriteString(b)
@@ -61,6 +61,7 @@ func RandLineWriter(w *bufio.Writer, filename string) {
 	w.WriteString(sb.String())
 }
 
+// InputLineWriter applies line from input prompt.
 func InputLineWriter(w *bufio.Writer, prompt string) {
 	b := bufio.NewReader(os.Stdin)
 	fmt.Println(prompt + ": ")
@@ -68,4 +69,3 @@ func InputLineWriter(w *bufio.Writer, prompt string) {
 	ck(err)
 	w.WriteString(s)
 }
-
